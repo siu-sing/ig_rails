@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/new'
+  get 'users/edit'
+  get 'users/show'
+  get 'users/update'
+  get 'users/destroy'
+  get 'users/create'
   devise_for :users
   # get 'comments/index'
   # get 'comments/new'
