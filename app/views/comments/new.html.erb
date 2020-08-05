@@ -1,0 +1,10 @@
+<h1>Comments#new</h1>
+<p>Find me in app/views/comments/new.html.erb</p>
+
+<%= form_for [@post, @comment] do |f| %>
+    <div class="form-row">
+        <%= f.label :comment_text, "Comments"%>
+        <%= f.text_field :comment_text %>
+    </div>
+    <%= f.submit %>
+<% end %>
