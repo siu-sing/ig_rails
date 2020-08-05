@@ -10,7 +10,7 @@
         <% @comments.each do |comment| %>
         <tr>
             <td><%= comment.comment_text %></td>
-            <td><%= link_to "Edit", edit_comment_path(comment), class: "btn btn-warning" %>
+            <td><%= link_to "Edit", edit_post_comment_path(Post.find(comment.post_id), comment), class: "btn btn-warning" %>
             <%= link_to "Delete Comment", comment_path(comment), method: "delete", data:{ confirm: "Are you sure you want to delete this comment"}, class: "btn btn-danger" %></td>
         </tr>
         <% end %>

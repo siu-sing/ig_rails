@@ -9,8 +9,8 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
-    # @post = Post.find(params[:post_id])
   end
 
   def show
@@ -38,7 +38,6 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to comments_path
     else
-      p @comment
       render :new
     end
   end

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Instagram</title>
@@ -27,6 +28,21 @@
   </div>
 </nav>
 
+	<% if notice %>
+	<p class="notice"><%= notice %></p>
+	<% end %>
+
+	<% if alert %>
+	<p class="alert"><%= alert %></p>
+	<% end %>
+
+	<% if user_signed_in? %>
+	<%= current_user.email %>
+	<%= link_to "logout", destroy_user_session_path, method: :delete %>
+	<% else %>
+	<%= link_to "sign up", new_user_registration_path %>
+    <%= link_to "sign in", new_user_session_path %>
+    <% end %>
 
 
     <%= yield %>
