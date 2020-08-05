@@ -12,7 +12,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    #post_params is saying this ONE post
 
     if @post.save
       redirect_to posts_path
@@ -30,10 +29,15 @@ class PostsController < ApplicationController
   end
 
   def update
+    if @post.update(post_params)
+      redirect_to posts_path
+    else
+      render :edit
+    end 
   end
 
   def destroy
-    if @post.destroys
+    if @post.destroy
       redirect_to posts_path
     else
       render :index
