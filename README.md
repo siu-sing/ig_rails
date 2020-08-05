@@ -27,3 +27,6 @@ As a user, I would like to my followers(or myself) to be able to create comment 
 - Comment-Model/Controller/View
     - Model (created by randall) - image url & caption
     - Controller, new/create, edit/update, delete 
+
+
+https://trello.com/b/NRCQx4UH/railschallenge
