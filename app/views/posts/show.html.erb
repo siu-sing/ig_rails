@@ -1,2 +1,21 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+
+<div class="container">
+    <%# @posts.each do |post| %>
+    <div class="text-center">
+        <div><%= image_tag @post.post_image %></div>
+
+        <div class="card mt-4 "><%= @post.caption %></div>
+    </div>
+
+        <%# <h5 class="my-3">Comments</h5>
+        <div>User1: abcde (placeholder)</div>
+
+    <hr>
+    <div class="form-group">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <p class="btn btn-sm btn-primary">Submit</p>
+  </div> %>
+
+</div>
