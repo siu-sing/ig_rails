@@ -34,11 +34,10 @@
                 
                     <div div class="col mb-4">
                         <div class="card">
-                            <%= image_tag post.post_image, class:"card-img-top" %>
-                            <div class="card-body">
-                             <%= link_to "View", post_path(post.id), class:"card-text" %>
+                        <%= link_to post_path(post.id) do %>
 
-                          </div>
+                            <%= image_tag post.post_image, class:"card-img-top" %>
+                            <%end%>
 
                         </div>
                     </div>
