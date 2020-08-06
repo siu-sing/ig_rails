@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-  #before_action :authenticate_user!
+  #in order to do any of the followin, must auth first
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy, :update]
+
   before_action :set_post, only: [:show, :edit, :destroy, :update]
 
   def index
@@ -13,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post['user_id'] = current_user.id
 
     if @post.save
       redirect_to posts_path
