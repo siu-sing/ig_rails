@@ -1,0 +1,11 @@
+<h1>Follows#show</h1>
+<p>Find me in app/views/follows/show.html.erb</p>
+<h3>Followed by</h3>
+<% @followers.each do |follower| %>
+<div><%= follower.id %>, <%= follower.email %></div>
+<% end %>
+
+<h3>Following</h3>
+<% @followings.each do |following| %>
+<div><%= following.id %>,<%= following.email %></div>
+<% end %>
