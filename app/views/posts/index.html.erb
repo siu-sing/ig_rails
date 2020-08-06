@@ -1,2 +1,49 @@
 <h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<%# <p>Find me in app/views/posts/index.html.erb</p> %>
+
+<%# add artist page %>
+<div class="container mt-3">
+    <%# <div class="row"> %>
+        <%# <div class="col-md-3 text-center">
+        <h4> &lt PC User Profile &gt</h4>
+            <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/68/4d/0c/684d0c30-610a-c9dd-b290-164bd0d53cd2/source/256x256bb.jpg" style="width:150px; height:150px;">
+
+            <h6><em>29 y/o looking to render(PC)</em></h6>
+
+            <p class="btn btn-sm btn-secondary">Follow(PC)</p>
+            <p class="btn btn-sm btn-secondary">Unfollow(PC)</p>
+
+            <p class="text-secondary"><small>99 followers(PC)</small></p>
+
+        </div> %>
+        <%# <div class="col-md-12"> %>
+
+        
+            <%#= link_to "Create Post", new_post_path, class: "btn btn-danger" %>
+            <%# <table class="table mt-4">
+            <tr>
+                <td>id</td>
+                <td>Post</td>
+                <td>Caption</td>
+                <td>actions</td>
+            </tr> %>
+            <div class="row row-cols-1 row-cols-md-4">
+            <% @posts.each do |post| %>
+            <%# <tr>
+                <td> %>
+                
+                    <div div class="col mb-4">
+                        <div class="card">
+                            <%= image_tag post.post_image, class:"card-img-top" %> 
+                             <%= link_to "View", post_path(post.id) %>
+
+                        </div>
+                    </div>
+              
+               
+                <% end %>
+
+                </div>
+        </div>
+    </div>
+</div>
