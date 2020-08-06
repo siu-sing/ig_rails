@@ -5,15 +5,15 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-3 text-center">
-        <h4> &lt Placeholder User Profile &gt</h4>
+        <h4> &lt PC User Profile &gt</h4>
             <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/68/4d/0c/684d0c30-610a-c9dd-b290-164bd0d53cd2/source/256x256bb.jpg" style="width:150px; height:150px;">
 
-            <h6><em>29 y/o looking to render</em></h6>
+            <h6><em>29 y/o looking to render(PC)</em></h6>
 
-            <p class="btn btn-sm btn-secondary">Follow</p>
-            <p class="btn btn-sm btn-secondary">Unfollow</p>
+            <p class="btn btn-sm btn-secondary">Follow(PC)</p>
+            <p class="btn btn-sm btn-secondary">Unfollow(PC)</p>
 
-            <p class="text-secondary"><small>99 followers</small></p>
+            <p class="text-secondary"><small>99 followers(PC)</small></p>
 
         </div>
         <div class="col-md-9">
@@ -31,7 +31,7 @@
                 <%= link_to post.id, post_path(post.id) %>
                 
                 </td>
-                <td><%= image_tag post.post_image %></td>
+                <td><%= image_tag post.post_image, height: 100, width: 100 %></td>
                 <td><%= post.caption %></td>
                 <td>
                     <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning" %>
