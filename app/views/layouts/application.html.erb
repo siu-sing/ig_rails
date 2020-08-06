@@ -36,7 +36,7 @@
       <%= link_to "New Post", new_post_path, class:"text-decoration-none text-secondary" %>
       </li>
       <li class="nav-item">
-        <%= link_to current_user.firstname, user_path(current_user), class:"text-decoration-none text-secondary mx-4" %>
+        <%#= link_to current_user.firstname, user_path(current_user), class:"text-decoration-none text-secondary mx-4" %>
       </li>
       <li class="nav-item">
 	    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"text-decoration-none text-secondary"%>
