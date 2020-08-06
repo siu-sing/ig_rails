@@ -2,7 +2,7 @@
 <p>Find me in app/views/comments/index.html.erb</p>
 
 <div class="container">
-<%= link_to "Add Comment", new_comment_path, class: "btn btn-danger" %>
+<%= link_to "Add Comment", new_post_comment_path(Post.find(params[:post_id]), Comment.new), class: "btn btn-danger" %>
     <table class="table mt-4">
         <tr>
             <td>Comments</td>
