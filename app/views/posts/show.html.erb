@@ -4,7 +4,7 @@
 <div class="container">
     <%# @posts.each do |post| %>
     <div class="text-center">
-        <div><%= image_tag @post.post_image %></div>
+        <div><%= image_tag @post.post_image, height: 200, width: 200 %></div>
 
         <div class="card mt-4 "><%= @post.caption %></div>
     </div>
